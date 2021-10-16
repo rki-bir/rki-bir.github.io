@@ -1,4 +1,4 @@
-site_name: RKI BIR - Bioinformatics Research Team
+site_name: Bioinformatics Research Team
 
 # configurations: dont change unless you know what you are doing!
 
@@ -46,8 +46,12 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-
-
+  - md_in_html
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  
 # Navigation
 ## USE SPACE not TAB
 
@@ -55,6 +59,7 @@ nav:
 - Home: index.md
 - Team: team.md
 - Publications: publications.md
+- Tools: tools.md
 #- Programs:  
 #        - Workflows: tools/workflows.md
 #        - Tools: tools/tools.md
