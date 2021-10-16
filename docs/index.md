@@ -1,17 +1,15 @@
-# Welcome to MkDocs
+# Welcome
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+We develop novel tools and workflows for handling large amounts of sequence data. We apply computational methods to automate de novo (meta-)genome and transcriptome assembly, analysis and annotation of RNA-Seq data, identification and characterization of pathogens such as viruses and bacteria from environmental samples and (more recently) molecular monitoring of infectious diseases.
 
-## Commands
+We strive to combine well-established and novel computational approaches into reproducible workflows to analyze and visualize large amounts of short- and long-read sequencing data.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Research interests
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+* Microbial bioinformatics
+* de novo assembly & annotation
+* Transcriptomics & comparative genomics
+* Metagenomics & -transcriptomics
+* Real-time nanopore sequencing
+* Workflow management & reproducibility
+* Automation & visualization

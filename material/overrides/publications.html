@@ -1,0 +1,84 @@
+{% block announce %}
+  <a href="https://rki-bir.github.io/index.html">
+    <strong>Go back to main page</strong>
+  </a>
+ {% endblock %}
+
+<head>
+    <title>
+        Publications
+    </title>
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://veg.github.io/phylotree.js/phylotree.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/rki-bir/rki-bir.github.io/docs/publications/parse-bibtex.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/rki-bir/rki-bir.github.io/docs/publications/render.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://veg.github.io/phylotree.js/phylotree.css" rel="stylesheet">
+
+    <style>
+        body {
+          font-family: "Tahoma", "Arial", san-serif;
+          font-size: 16px;
+        }
+
+        .table th, .table td {
+             border-top: none !important;
+         }
+         
+         @media print
+            {    
+                .no-print, .no-print *
+                {
+                    display: none !important;
+                }
+            }
+
+    </style>
+</head>
+
+
+  
+
+    <div class="container">
+        <div class="row">
+            <div class = "col-xs-12" data-receiver-for = "Publications" data-style-type = "bibtex" data-style-header = "on">
+            </div>
+        </div>  
+    </div>
+    
+
+<script>
+
+
+    $(document).ready (function () {
+        load_cv_data ("https://raw.githubusercontent.com/rki-bir/rki-bir.github.io/main/docs/publications/data/publications.json");
+        jQuery.getScript( "https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js" )
+    });
+
+</script>
+
+
+</body>
+
+</html>
+
+
+{% block footer %}
+<a href="https://github.com/spond">
+    <center>design and code from github.com/spond</center>
+  </a>
+{% endblock %}

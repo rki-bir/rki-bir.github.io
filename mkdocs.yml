@@ -1,3 +1,48 @@
-site_name: RKI-BIR
+site_name: RKI BIR - Bioinformatics Research Team
+
+# configurations: dont change unless you know what you are doing!
+
 theme:
   name: material
+  custom_dir: material
+  icon:
+    logo: octicons/chevron-right-24
+
+  include_search_page: true
+  search_index_only: true
+
+  language: en
+  features:
+    - navigation.tabs
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
+  palette:
+    scheme: default
+    primary: indigo 
+    accent: deep orange
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+copyright: ©2021 BIR
+
+#extra_css:
+#  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rki-bir
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/martinhoelzer
+    - icon: fontawesome/brands/google
+      link: https://scholar.google.com/citations?user=DMZ7Hc8AAAAJ&hl=en
+#    - icon: fontawesome/brands/researchgate
+#      link: https://www.researchgate.net/profile/Christian_Brandt5
+#    - icon: fontawesome/brands/linkedin
+#      link: https://de.linkedin.com/in/christian-b-a2b05018a
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
