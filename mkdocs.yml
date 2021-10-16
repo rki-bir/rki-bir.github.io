@@ -54,7 +54,7 @@ markdown_extensions:
 nav:
 - Home: index.md
 - Team: team.md
-- Publications: publications/peer.md
+- Publications: publications.md
 #- Programs:  
 #        - Workflows: tools/workflows.md
 #        - Tools: tools/tools.md
