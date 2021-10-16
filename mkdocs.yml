@@ -46,3 +46,25 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+
+
+# Navigation
+## USE SPACE not TAB
+
+nav:
+- Home: index.md
+- Team: team.md
+- Publications: publications/peer.md
+#- Programs:  
+#        - Workflows: tools/workflows.md
+#        - Tools: tools/tools.md
+#        - Other: tools/other.md
+#- SARS-CoV-2: SARS-CoV-2/SARS-CoV-2.md
+#- Tutorials: 
+#        - shell: tutorials/shell.md
+#        - python:
+#              - python general: tutorials/python/python.md
+#              - jupyter book: tutorials/python/jbook.md
+#              - pandas: tutorials/python/pandas.md
+#        - nextflow: tutorials/nextflow.md
+#        - docker: tutorials/docker.md
