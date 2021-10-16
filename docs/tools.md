@@ -11,7 +11,7 @@ A simple RNA-Seq differential gene expression pipeline using Nextflow. For a tes
 nextflow run hoelzer-lab/rnaflow -r v1.1.0 -profile test,local,docker
 ```
 
-[![RNAflow logo](tools/rnaflow.png)](https://github.com/hoelzer-lab/rnaflow)
+[![RNAflow logo](../tools/rnaflow.png)](https://github.com/hoelzer-lab/rnaflow)
 
 [:octicons-book-16: Publication](https://www.biorxiv.org/content/10.1101/2020.07.24.219899v1) 
 [:octicons-mark-github-16: GitHub](https://github.com/hoelzer-lab/rnaflow)
@@ -19,7 +19,7 @@ nextflow run hoelzer-lab/rnaflow -r v1.1.0 -profile test,local,docker
 
 ---
 ## RIBAP 
-[![](tools/upsetr.svg){style="width:340px" align="right"}](tools/upsetr.svg)
+[![](../tools/upsetr.svg){style="width:340px" align="right"}](tools/upsetr.svg)
 
 **R**oary **I**LP **B**acterial **A**nnotation **P**ipeline
 
@@ -37,7 +37,7 @@ Currently under heavy development, so expect some bugs but feel free to [report 
 
 
 ---
-## PoSeiDon [![](tools/poseidon.svg){style="width:160px" align="right"}](https://github.com/hoelzer/poseidon)
+## PoSeiDon [![](../tools/poseidon.svg){style="width:160px" align="right"}](https://github.com/hoelzer/poseidon)
 
 **Po**sitive **Se**lect**i**on **D**etecti**on** and recombination analysis of protein-coding genes.
 
@@ -50,7 +50,7 @@ nextflow run hoelzer/poseidon -r 1.0.2 --help
 
 
 ---
-## PCAGO [![](tools/pcago.png){style="width:260px" align="right"}](https://pcago.bioinf.uni-jena.de/)
+## PCAGO [![](../tools/pcago.png){style="width:260px" align="right"}](https://pcago.bioinf.uni-jena.de/)
 
 An interactive web service that allows analysis of RNA-Seq read count data with [PCA](https://towardsdatascience.com/a-step-by-step-explanation-of-principal-component-analysis-b836fb9c97e2) and clustering.
 
@@ -73,7 +73,7 @@ In both cases you will then be able to access PCAGO via the following address in
 [:octicons-flame-16: Webservice](https://pcago.bioinf.uni-jena.de/)
 
 ---
-## SIM [![](tools/sim.png){style="width:400px" align="right"}](https://github.com/desiro/silentMutations)
+## SIM [![](../tools/sim.png){style="width:400px" align="right"}](https://github.com/desiro/silentMutations)
 
 SilentMutations (SIM) automatically constructs disrupting and restoring synonymous (silent) mutation pairs within coding regions for combinatorial _in silico_ analysis of (viral) RNA-RNA interactions.
 
