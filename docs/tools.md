@@ -77,6 +77,6 @@ In both cases you will then be able to access PCAGO via the following address in
 
 SilentMutations (SIM) automatically constructs disrupting and restoring synonymous (silent) mutation pairs within coding regions for combinatorial _in silico_ analysis of (viral) RNA-RNA interactions.
 
-[:octicons-book-16: Preprint](https://doi.org/10.1016/j.virusres.2018.11.005) 
+[:octicons-book-16: Publication](https://doi.org/10.1016/j.virusres.2018.11.005) 
 [:octicons-mark-github-16: GitHub](https://github.com/desiro/silentMutations)
 
