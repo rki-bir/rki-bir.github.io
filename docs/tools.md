@@ -11,7 +11,9 @@ A simple RNA-Seq differential gene expression pipeline using Nextflow. For a tes
 nextflow run hoelzer-lab/rnaflow -r v1.1.0 -profile test,local,docker
 ```
 
-[![RNAflow logo](../tools/rnaflow.png)](https://github.com/hoelzer-lab/rnaflow)
+<kbd>
+[![](../tools/rnaflow.png)](https://github.com/hoelzer-lab/rnaflow)
+</kbd>
 
 [:octicons-book-16: Publication](https://www.biorxiv.org/content/10.1101/2020.07.24.219899v1) 
 [:octicons-mark-github-16: GitHub](https://github.com/hoelzer-lab/rnaflow)
