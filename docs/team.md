@@ -5,7 +5,9 @@
 Ph.D., University of Jena
 Diploma Bioinf, University of Jena
 
+<kbd>
 <img src="../team/martin.png" width="120">
+</kbd>
 
 Martin is the deputy head of the Bioinformatics group and in charge of the bioinformatics research in the BIR team. 
 <!--His area of expertise lies in cloud computing, workflow managers, containerization, nanopore sequencing, metagenomics, antibiotic resistance and plasmids.-->
