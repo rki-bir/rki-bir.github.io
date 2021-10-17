@@ -26,7 +26,7 @@ theme:
 copyright: ©2021 BIR
 
 extra_css:
-  - material/extra.css
+  - stylesheets/extra.css
 
 extra:
   social:
