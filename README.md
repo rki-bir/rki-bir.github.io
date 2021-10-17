@@ -51,3 +51,11 @@ mkdocs serve &
 * open the local webpage in your browser via `http://0.0.0.0:8000/` (for Docker) or the URL printer on the terminal
    * or click [this link](http://0.0.0.0:8000/)
 * now you can check the changes
+
+## Format images
+
+Images can be best inserted via markdown syntax. But you can also use HTML code. The width and position can be changed via markdown style syntax. The custom `stylesheets/extra.css` adds classes for `#shadow` and `#round` corners that can be activated via:
+
+```markdown
+![](/team/martin.png#shadow#round){style="width:120px" align="right"}
+```
