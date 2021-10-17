@@ -11,7 +11,7 @@ A simple RNA-Seq differential gene expression pipeline using Nextflow. For a tes
 nextflow run hoelzer-lab/rnaflow -r v1.1.0 -profile test,local,docker
 ```
 
-[![](../tools/rnaflow.png#shadow#round)](https://github.com/hoelzer-lab/rnaflow)
+[![](/tools/rnaflow.png#shadow#round)](https://github.com/hoelzer-lab/rnaflow)
 
 [:octicons-book-16: Publication](https://www.biorxiv.org/content/10.1101/2020.07.24.219899v1) 
 [:octicons-mark-github-16: GitHub](https://github.com/hoelzer-lab/rnaflow)
@@ -19,14 +19,15 @@ nextflow run hoelzer-lab/rnaflow -r v1.1.0 -profile test,local,docker
 
 ---
 ## RIBAP 
-[![](../tools/upsetr.svg#shadow#round){style="width:340px" align="right"}](tools/upsetr.svg)
+[![](/tools/upsetr.svg#shadow#round){style="width:340px" align="right"}](tools/upsetr.svg)
 
 **R**oary **I**LP **B**acterial **A**nnotation **P**ipeline
 
 RIBAP combines sequence homology information from [Roary](https://github.com/sanger-pathogens/Roary) with smart pairwise [ILP](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4391664/) calculations to produce a more complete bacterial core gene set. 
 
 ```bash
-nextflow run hoelzer-lab/ribap -r 0.5.0 --help
+nextflow run hoelzer-lab/ribap \
+-r 0.5.0 --help
 ```
 
 RIBAP was already used in [Vorimore _et al._ (2021)](https://doi.org/10.1016/j.syapm.2021.126200) and [Hölzer _et al._ (2020)](https://www.mdpi.com/2076-0817/9/11/899). 
@@ -37,7 +38,7 @@ Currently under heavy development, so expect some bugs but feel free to [report 
 
 
 ---
-## PoSeiDon [![](../tools/poseidon.svg#shadow#round){style="width:160px" align="right"}](https://github.com/hoelzer/poseidon)
+## PoSeiDon [![](/tools/poseidon.svg#shadow#round){style="width:160px" align="right"}](https://github.com/hoelzer/poseidon)
 
 **Po**sitive **Se**lect**i**on **D**etecti**on** and recombination analysis of protein-coding genes.
 
@@ -50,7 +51,7 @@ nextflow run hoelzer/poseidon -r 1.0.2 --help
 
 
 ---
-## PCAGO [![](../tools/pcago.png#shadow#round){style="width:260px" align="right"}](https://pcago.bioinf.uni-jena.de/)
+## PCAGO [![](/tools/pcago.png#shadow#round){style="width:260px" align="right"}](https://pcago.bioinf.uni-jena.de/)
 
 An interactive web service that allows analysis of RNA-Seq read count data with [PCA](https://towardsdatascience.com/a-step-by-step-explanation-of-principal-component-analysis-b836fb9c97e2) and clustering.
 
@@ -73,7 +74,7 @@ In both cases you will then be able to access PCAGO via the following address in
 [:octicons-flame-16: Webservice](https://pcago.bioinf.uni-jena.de/)
 
 ---
-## SIM [![](../tools/sim.png#shadow#round){style="width:400px" align="right"}](https://github.com/desiro/silentMutations)
+## SIM [![](/tools/sim.png#shadow#round){style="width:400px" align="right"}](https://github.com/desiro/silentMutations)
 
 SilentMutations (SIM) automatically constructs disrupting and restoring synonymous (silent) mutation pairs within coding regions for combinatorial _in silico_ analysis of (viral) RNA-RNA interactions.
 

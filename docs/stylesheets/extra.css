@@ -1,17 +1,11 @@
+/* https://github.com/squidfunk/mkdocs-material/issues/1635 */
+
 img[src*="#round"] { 
     margin: 6px 3px 60px 6px; 
     border-radius:10%; 
 }
 
-/*img {
-    height: auto;
-    width: auto;
-    border: 1px solid #9f9f9f;
-    transition: transform ease-in-out 0.3s;
-}*/
-
 img[src*="#shadow"] {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* https://github.com/squidfunk/mkdocs-material/issues/1635 */

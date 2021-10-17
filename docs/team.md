@@ -1,25 +1,28 @@
 # Team
 
-## Dr. Martin Hölzer
-[![Twitter Follow](https://img.shields.io/twitter/follow/martinhoelzer.svg?style=social)](https://twitter.com/martinhoelzer) 
-Ph.D., University of Jena
-Diploma Bioinf, University of Jena
+## Dr. Martin Hölzer ![](/team/martin.png#shadow#round){style="width:120px" align="left"}
 
- 
-![](/team/martin.png#shadow#round){style="width:120px" align="right"}
-
-Martin is the deputy head of the Bioinformatics group and in charge of the bioinformatics research in the BIR team. 
-<!--His area of expertise lies in cloud computing, workflow managers, containerization, nanopore sequencing, metagenomics, antibiotic resistance and plasmids.-->
-
-### Links
 [:octicons-mail-16: Email](mailto:hoelzer.martin@gmail.com)  
-[:octicons-person-16: Researchgate](https://www.researchgate.net/profile/Christian_Brandt5)  
-[:octicons-book-16: google scholar](https://scholar.google.com/citations?user=YSWxKeoAAAAJ&hl=en)  
-[:octicons-mark-github-16: github link](https://github.com/hoelzer) 
-
-<a target="_blank" href="https://github.com/hoelzer/"><i class="fab fa-github" style="color:black; font-size:24px;"></i></a>
-
+[:octicons-book-16: Google Scholar](https://scholar.google.com/citations?user=YSWxKeoAAAAJ&hl=en)  
+[:octicons-mark-github-16: GitHub](https://github.com/hoelzer) 
+<!--[:octicons-person-16: Researchgate](https://www.researchgate.net/profile/xxxxxxx)-->
 <!--orcid: https://orcid.org/0000-0001-7090-8717-->
+[![Twitter Follow](https://img.shields.io/twitter/follow/martinhoelzer.svg?style=social)](https://twitter.com/martinhoelzer) 
+
+Martin is deputy head of the MF1 Bioinformatics unit and responsible of the research going on in the BIR team. His expertise lies in RNA-Seq, metagenomics, nanopore sequencing, virus detection, Nextflow and containerization.
+
+
+## Dr. Hugues Richard ![](/team/martin.png#shadow#round){style="width:120px" align="left"}
+
+[:octicons-mail-16: Email](mailto:)  
+[:octicons-book-16: Google Scholar](https://scholar.google.com/citations?user=TzNfNbYAAAAJ&hl=en)  
+[:octicons-mark-github-16: GitHub](https://github.com/huguesrichard) 
+<!--[:octicons-person-16: Researchgate](https://www.researchgate.net/profile/xxxxxxx)-->
+<!--orcid: https://orcid.org/0000-0001-7090-8717-->
+[![Twitter Follow](https://img.shields.io/twitter/follow/hugues_richard.svg?style=social)](https://twitter.com/hugues_richard) 
+
+Hugues is ... and PI of ...
+
 
 
 
