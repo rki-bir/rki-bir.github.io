@@ -4,6 +4,8 @@ Content of the RKI-BIR web page.
 
 Some contents of this README were shamelessly stolen from the [case-group](https://github.com/CaSe-group/case-group.github.io/). Thx [@replikation](https://github.com/replikation).
 
+[hackmd.io notes](https://hackmd.io/@GqOnlbqgSdKAMwgCUU_ljQ/BJmM49Q4F) about how this github page was initially setup w/ Materials for MkDocs and the autobuild. 
+
 ## Change content
 
 Go to the coresponding `.md` file and edit it and commit: done. The page will re-build via a GitHub Action. 
