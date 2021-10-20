@@ -7,21 +7,30 @@ theme:
   custom_dir: material
   icon:
     logo: octicons/chevron-right-24
-
   include_search_page: true
   search_index_only: true
-
   language: en
   features:
     - navigation.tabs
   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
-  palette:
-    scheme: default
-    primary: indigo 
-    accent: deep orange
+  palette: 
+    - scheme: default
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate 
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   font:
     text: Roboto
     code: Roboto Mono
+
+
 
 copyright: ©2021 BIR
 
@@ -41,6 +50,13 @@ extra:
 #    - icon: fontawesome/brands/linkedin
 #      link: https://de.linkedin.com/in/christian-b-a2b05018a
 
+plugins:
+  - search
+  - bibtex:
+      bib_file: "refs.bib"
+      cite_style: "pandoc"
+
+
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
@@ -51,8 +67,10 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.snippets
-  - mdx_bibtex
-  
+  - footnotes 
+#  - mdx_bibtex
+
+
 # Navigation
 ## USE SPACE not TAB
 
@@ -63,16 +81,3 @@ nav:
 - Tools: tools.md
 - Collaborations: collaborations.md
 - Projects: projects.md
-#- Programs:  
-#        - Workflows: tools/workflows.md
-#        - Tools: tools/tools.md
-#        - Other: tools/other.md
-#- SARS-CoV-2: SARS-CoV-2/SARS-CoV-2.md
-#- Tutorials: 
-#        - shell: tutorials/shell.md
-#        - python:
-#              - python general: tutorials/python/python.md
-#              - jupyter book: tutorials/python/jbook.md
-#              - pandas: tutorials/python/pandas.md
-#        - nextflow: tutorials/nextflow.md
-#        - docker: tutorials/docker.md
