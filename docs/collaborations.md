@@ -1,8 +1,7 @@
+![](/collaborations/hand-in-hand.png){style="width:180px" align="right"}
 # Collaborations
 
 This list does not claim to be complete. Science thrives on interdisciplinarity and cooperation, and listed here, among many other great scientists, are those with whom we currently cooperate a lot.
-
-![](/collaborations/hand-in-hand.png){style="width:180px" align="right"}
 
 * Systems Medicine of Infectious Disease, Robert Koch Institute, Berlin ([Max von Kleist](http://systems-pharmacology.de/))
 * Data Analytics and Computational Statistics, Hasso Plattner Institute, Potsdam ([Bernhard Renard](https://hpi.de/forschung/fachgebiete/data-analytics-and-computational-statistics.html))
