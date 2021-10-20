@@ -1,10 +1,9 @@
 site_name: Bioinformatics Research Team
 
 # configurations: dont change unless you know what you are doing!
-
 theme:
   name: material
-  custom_dir: material
+  custom_dir: overrides
   icon:
     logo: octicons/chevron-right-24
   include_search_page: true
@@ -14,23 +13,23 @@ theme:
     - navigation.tabs
   # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
   palette: 
-    - scheme: default
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
       primary: indigo
       accent: deep orange
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-    - scheme: slate 
-      primary: indigo
-      accent: deep orange
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate 
+      primary: red
+      accent: pink
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
   font:
     text: Roboto
     code: Roboto Mono
-
-
 
 copyright: ©2021 BIR
 
@@ -56,7 +55,6 @@ plugins:
       bib_file: "refs.bib"
       cite_style: "pandoc"
 
-
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
@@ -70,10 +68,8 @@ markdown_extensions:
   - footnotes 
 #  - mdx_bibtex
 
-
 # Navigation
 ## USE SPACE not TAB
-
 nav:
 - Home: index.md
 - Team: team.md

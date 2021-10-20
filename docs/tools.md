@@ -1,6 +1,6 @@
 # Tools & Pipelines
 
-Most of our pipelines need only [Nextflow](https://www.nextflow.io/) and [Docker](https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/#install-docker-ce) or [Conda](https://docs.conda.io/en/latest/miniconda.html) installed. Thanks to all developers, contributors and users! 
+Most of our pipelines need only [Nextflow](https://www.nextflow.io/) and [Docker](https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/#install-docker-ce) or [Conda](https://docs.conda.io/en/latest/miniconda.html) installed. Thanks to all co-authors, developers, contributors and users! 
 
 ---
 ## RNAflow
@@ -12,7 +12,6 @@ nextflow run hoelzer-lab/rnaflow -r v1.1.0 -profile test,local,docker
 ```
 
 [![](/tools/rnaflow.png#shadow#round)](https://github.com/hoelzer-lab/rnaflow)
-
 [:octicons-book-16: Publication](https://www.biorxiv.org/content/10.1101/2020.07.24.219899v1) 
 [:octicons-mark-github-16: GitHub](https://github.com/hoelzer-lab/rnaflow)
 
