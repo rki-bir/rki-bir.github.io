@@ -3,6 +3,19 @@
 Most of our pipelines need only [Nextflow](https://www.nextflow.io/) and [Docker](https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/#install-docker-ce) or [Conda](https://docs.conda.io/en/latest/miniconda.html) installed. Thanks to all co-authors, developers, contributors and users! 
 
 ---
+## poreCov
+
+An easy to use, fast, and robust workflow for SARS-CoV-2 genome reconstruction via Nanopore amplicon sequencing. Developed in cooperation with the [CaSe group](https://case-group.github.io).
+
+```bash
+nextflow run replikation/poreCov -r 0.11.1 -profile test_fastq,local,docker
+```
+<!--[![](/tools/porecov.png#shadow#round)](https://github.com/replikation/poreCov)-->
+[:octicons-book-16: Publication](https://www.frontiersin.org/articles/10.3389/fgene.2021.711437/full) 
+[:octicons-mark-github-16: GitHub](https://github.com/replikation/poreCov)
+
+
+---
 ## RNAflow
 
 A simple RNA-Seq differential gene expression pipeline using Nextflow. For a test run, please try:
