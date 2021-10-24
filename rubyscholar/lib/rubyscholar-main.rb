@@ -123,7 +123,8 @@ module Rubyscholar
                 unless doi.empty?
                   doc.text(' ')
                   doc.a(href: URI.join("http://dx.doi.org/", doi)) do
-                    doc.text "[DOI]"
+                    #doc.text "[DOI]"
+                    doc.text ":octicons-book-16: DOI"
                   end
                 end
 
@@ -136,7 +137,7 @@ module Rubyscholar
                   doc.text(' ')
                   doc.a(href: paper[:citingPapers], title: "Citations") do
                     doc.span(class: "badge badge-inverse") do
-                      doc.test("#{paper[:citationCount]}x")
+                      doc.test(":octicons-person-16: #{paper[:citationCount]} cites")
                     end
                   end
                 end
