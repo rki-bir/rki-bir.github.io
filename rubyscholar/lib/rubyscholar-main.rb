@@ -44,9 +44,9 @@ module Rubyscholar
         scholar[:journal]        = paper.children[0].children[2].text rescue ''
         scholar[:journalName]    = scholar[:journal].split(/,|\d/).first.clean  rescue ''
         scholar[:journalDetails] = scholar[:journal].gsub(scholar[:journalName], '').clean
-        scholar[:year]           = scholar[:journalDetails].match(/, \d+$/)[0]  rescue ''
+        scholar[:year]           = scholar[:journalDetails].match(/, \d+$/)[0].sub('()','')  rescue ''
         scholar[:journalDetails] = scholar[:journalDetails].gsub(scholar[:year], '').clean
-        scholar[:year]           = scholar[:year].clean
+        scholar[:year]           = scholar[:year].sub('()','').clean
 
         #citations
         citeInfo                = paper.css('.gsc_a_ac')
@@ -121,12 +121,11 @@ module Rubyscholar
                 doc.text paper[:journalDetails]
 
                 scholar_icon = '<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75V1.75zm8.755 3a2.25 2.25 0 0 1 2.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574z"/></svg></span>'
-
                 unless doi.empty?
                   doc.text(' ')
                   doc.a(href: URI.join("http://dx.doi.org/", doi)) do
                     #doc.text "[DOI]"
-                    doc.text "#{scholar_icon} DOI"
+                    doc.text scholar_icon + ' DOI'
                   end
                 end
 
