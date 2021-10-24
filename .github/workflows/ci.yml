@@ -13,7 +13,8 @@ jobs:
           python-version: 3.x
       - run: conda install -y -c conda-forge ruby
       - run: sudo gem install bundler:1.11.2
-      - run: git clone https://github.com/rki-bir/rubyscholar.git && cd rubyscholar
+      - run: git clone https://github.com/rki-bir/rubyscholar.git
+      - working-directory: ./rubyscholar
       - run: bundle install
       - run: bundle exec rubyscholar
       - run: pip install mkdocs-material mkdocs-bibtex 
