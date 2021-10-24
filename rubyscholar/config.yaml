@@ -1,0 +1,35 @@
+# Google Scholar page (you can choose how you sort it)
+url: "https://scholar.google.com/citations?hl=en&user=DMZ7Hc8AAAAJ&sortby=pubdate&view_op=list_works&pagesize=100"
+
+#### Everything below this line is OPTIONAL ####
+
+# Name to highlight 
+highlight: "M Hölzer"
+
+
+
+# Need an Email address that has been registered with CrossRef to obtain DOIs 
+# using their OpenURL service. 
+# e.g. the following should provide an XML file: 
+# http://www.crossref.org/openurl?redirect=false&pid=YOUR@EMAIL>COM&aulast=Wurm&atitle=Behavioral%20Genomics:%20A,%20Bee,%20C,%20G,%20T
+#email: your@email.com
+
+
+# Show "[Cited Nx]" if N > the following number
+minCitations: 5
+
+# Words to italicize (emphasize). These will have "<em>" around them. 
+italicize: 
+ - Myotis daubentonii
+ - de novo
+ - De novo
+ - Chlamydia buteonis
+ - Phoenicopterus roseus
+
+# DOIs of articles for which we should show altmetric.org badges. 
+#altmetricDOIs: 
+# - "10.1038/nature11832"
+
+# Article titles for which we have urls to PDFs
+#pdfs:
+#  "A Y-like social chromosome causes alternative colony organization in fire ants" : "/publications/wangwurm2013socialChromosome.pdf"
