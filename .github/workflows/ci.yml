@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: conda create -y -n rubyscholar -c conda-forge ruby && conda activate rubyscholar
+      - run: conda install -y -c conda-forge ruby
       - run: sudo gem install bundler:1.11.2
       - run: git clone https://github.com/rki-bir/rubyscholar.git && cd rubyscholar
       - run: bundle install
