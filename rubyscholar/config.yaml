@@ -6,13 +6,11 @@ url: "https://scholar.google.com/citations?hl=en&user=DMZ7Hc8AAAAJ&sortby=pubdat
 # Name to highlight 
 highlight: "M Hölzer"
 
-
-
 # Need an Email address that has been registered with CrossRef to obtain DOIs 
 # using their OpenURL service. 
 # e.g. the following should provide an XML file: 
 # http://www.crossref.org/openurl?redirect=false&pid=YOUR@EMAIL>COM&aulast=Wurm&atitle=Behavioral%20Genomics:%20A,%20Bee,%20C,%20G,%20T
-#email: your@email.com
+email: your@email.com
 
 
 # Show "[Cited Nx]" if N > the following number

@@ -61,3 +61,7 @@ Images can be best inserted via markdown syntax. But you can also use HTML code.
 ```markdown
 ![](/team/martin.png#shadow#round){style="width:120px" align="right"}
 ```
+
+## Publications
+
+Publications are currently scraped from Martins Google Scholar profile. To do so, a ruby script is used originally developed and provided by [https://github.com/wurmlab/rubyscholar](https://github.com/wurmlab/rubyscholar) (Thanks!). Via the ruby script, a Google Scholar profile is scanned and a HTML file with the found publications is generated. What is scanned and some formatting is defined in `rubyscholar/config.yaml`. Then, this HTML content is added to the `docs/publications.md` which will then be finally rendered via mkdocs. All is automatically performed via GitHub CI.  

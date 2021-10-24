@@ -69,12 +69,13 @@ module Rubyscholar
                               .parameterize.gsub(/[^A-Za-z\-]/, '')
       sleep(1) # to reduce risk
       STDERR << "Getting DOI for paper by #{lastNameFirstAuthor}: #{title}.\n"
+      p = URI::Parser.new
       url = 'http://www.crossref.org/openurl?redirect=false' +
         '&pid='    + crossRefEmail +
         '&aulast=' + lastNameFirstAuthor +
-        '&atitle=' + URI.escape(title) +
+        '&atitle=' + p.escape(title) +
         '&format=json'
-      JSON.load(open(url)) rescue ''
+      JSON.load(URI.open(url)) rescue ''
     end
   end
 
