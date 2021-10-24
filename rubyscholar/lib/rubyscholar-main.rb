@@ -120,11 +120,13 @@ module Rubyscholar
                 doc.em   paper[:journalName] + ' '
                 doc.text paper[:journalDetails]
 
+                scholar_icon = '<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75V1.75zm8.755 3a2.25 2.25 0 0 1 2.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574z"/></svg></span>'
+
                 unless doi.empty?
                   doc.text(' ')
                   doc.a(href: URI.join("http://dx.doi.org/", doi)) do
                     #doc.text "[DOI]"
-                    doc.text ":octicons-book-16: DOI"
+                    doc.text "#{scholar_icon} DOI"
                   end
                 end
 
@@ -133,11 +135,12 @@ module Rubyscholar
                   doc.a(href: @pdfLinks[paper[:title]]) { doc.text "[PDF]" }
 		end
 
+                citation_icon = '<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zm.061 3.073a4 4 0 1 0-5.123 0 6.004 6.004 0 0 0-3.431 5.142.75.75 0 0 0 1.498.07 4.5 4.5 0 0 1 8.99 0 .75.75 0 1 0 1.498-.07 6.005 6.005 0 0 0-3.432-5.142z"/></svg></span>'
                 if paper[:citationCount].to_i > @minCitations
                   doc.text(' ')
                   doc.a(href: paper[:citingPapers], title: "Citations") do
                     doc.span(class: "badge badge-inverse") do
-                      doc.test(":octicons-person-16: #{paper[:citationCount]} cites")
+                      doc.test("#{citation_icon} #{paper[:citationCount]} cites")
                     end
                   end
                 end

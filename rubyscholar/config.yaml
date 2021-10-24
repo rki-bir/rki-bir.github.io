@@ -21,8 +21,15 @@ italicize:
  - Myotis daubentonii
  - de novo
  - De novo
+ - Chlamydia
  - Chlamydia buteonis
+ - Chlamydia Psittaci
+ - Chlamydia psittaci
+ - Chlamydiaceae
+ - Mycobacterium avium
+ - paratuberculosis
  - Phoenicopterus roseus
+ - Klebsiella pneumoniae
 
 # DOIs of articles for which we should show altmetric.org badges. 
 #altmetricDOIs: 
