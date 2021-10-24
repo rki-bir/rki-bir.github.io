@@ -13,7 +13,7 @@ jobs:
           python-version: 3.x
       - run: conda install -y -c conda-forge ruby
       - run: sudo gem install bundler:1.11.2
-      - working-directory: ./rubyscholar
+        working-directory: ./rubyscholar
       - run: bundle install
       - run: bundle exec rubyscholar
       - run: pip install mkdocs-material mkdocs-bibtex 
