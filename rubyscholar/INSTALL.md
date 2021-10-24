@@ -1,3 +1,5 @@
+# FROM: https://github.com/raivivek/rubyscholar and ORIGINALLY: https://github.com/wurmlab/rubyscholar
+
 ```bash
 conda create -y -n rubyscholar -c conda-forge ruby
 gem install bundler:1.11.2
