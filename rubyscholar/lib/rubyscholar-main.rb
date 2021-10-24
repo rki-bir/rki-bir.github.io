@@ -125,7 +125,9 @@ module Rubyscholar
                   doc.text(' ')
                   doc.a(href: URI.join("http://dx.doi.org/", doi)) do
                     #doc.text "[DOI]"
-                    doc.text scholar_icon + ' DOI'
+                    doc.text "#{scholar_icon} DOI"
+                    doc.content.gsub('&lt;','<')
+                    doc.content.gsub('&gt;','>')
                   end
                 end
 
