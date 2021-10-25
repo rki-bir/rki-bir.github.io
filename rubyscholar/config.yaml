@@ -18,19 +18,19 @@ minCitations: 5
 
 # Words to italicize (emphasize). These will have "<em>" around them. 
 italicize: 
- - Myotis daubentonii
- - de novo
- - De novo
- - Chlamydia
- - Chlamydia buteonis
- - Chlamydia Psittaci
- - Chlamydia psittaci
- - Chlamydiaceae
- - Mycobacterium avium
- - paratuberculosis
- - Phoenicopterus roseus
- - Klebsiella pneumoniae
- - et al
+ - 'Myotis daubentonii'
+ - 'de novo'
+ - 'De novo'
+ - 'Chlamydia '
+ - 'Chlamydia buteonis'
+ - 'Chlamydia Psittaci'
+ - 'Chlamydia psittaci'
+ - 'Chlamydiaceae'
+ - 'Mycobacterium avium'
+ - 'paratuberculosis'
+ - 'Phoenicopterus roseus'
+ - 'Klebsiella pneumoniae'
+ - 'et al'
 
 # DOIs of articles for which we should show altmetric.org badges. 
 #altmetricDOIs: 

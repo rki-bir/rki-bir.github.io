@@ -99,6 +99,55 @@ module Rubyscholar
       papers.to_json
     end
 
+    def to_md
+      out_md = ''
+      @parser.parsedPapers.each_with_index do |paperData, index|
+        paper_entry = ''
+        paper = paperData[:scholar]
+        doi   = paperData[:crossref]['created']['DOI'] rescue ''
+        paper_counter = (@parser.parsedPapers.length - index).to_s
+        paper_entry = "#{paper_counter}" + '\. '
+        paper_entry += "__#{paper[:title]}__. "
+        paper_entry += "_#{paper[:journalName]}_"
+        paper_entry += ' (' + paper[:year] + ')</br>' 
+        if paper[:authors].include?(@nameToHighlight)
+          paper_entry += paper[:authors].sub(Regexp.new(@nameToHighlight + '.*'), '')
+          paper_entry += "__#{@nameToHighlight}__"
+          paper_entry += paper[:authors].sub(Regexp.new('.*' + @nameToHighlight), '')
+        else
+          paper_entry += paper[:authors]
+        end
+        paper_entry += "\n"
+        #paper_entry += paper[:journalDetails]
+
+        scholar_icon = ':octicons-book-16:'
+        unless doi.empty?
+          paper_entry += ' '
+          paper_entry += "[#{scholar_icon}](http://dx.doi.org/#{doi})"
+        end
+
+        if @pdfLinks.keys.include?(paper[:title])
+          paper_entry += ' '
+          paper_entry += "[[PDF]](#{@pdfLinks[paper[:title]]})"
+        end
+
+        citation_icon = ':octicons-person-16:'
+        if paper[:citationCount].to_i > @minCitations
+          paper_entry += ' '
+          paper_entry += "[#{citation_icon} #{paper[:citationCount]} cites](#{paper[:citingPapers]})"
+        end
+
+        if altmetricDOIs.include?(doi)
+          paper_entry += ' '
+          paper_entry += "#{doi}"
+        end
+
+        paper_entry += "\n"
+        out_md += paper_entry + "\n" 
+      end
+      return out_md
+    end
+
     def to_html
       builder = Nokogiri::HTML::Builder.new do |doc|
         doc.div(class: "publication") do
@@ -131,10 +180,10 @@ module Rubyscholar
                   end
                 end
 
-		if @pdfLinks.keys.include?(paper[:title])
+		            if @pdfLinks.keys.include?(paper[:title])
                   doc.text(' ')
                   doc.a(href: @pdfLinks[paper[:title]]) { doc.text "[PDF]" }
-		end
+		            end
 
                 #citation_icon = '<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zm.061 3.073a4 4 0 1 0-5.123 0 6.004 6.004 0 0 0-3.431 5.142.75.75 0 0 0 1.498.07 4.5 4.5 0 0 1 8.99 0 .75.75 0 1 0 1.498-.07 6.005 6.005 0 0 0-3.432-5.142z"/></svg></span>'
                 if paper[:citationCount].to_i > @minCitations
@@ -147,7 +196,7 @@ module Rubyscholar
                   #end
                 end
 
-		if altmetricDOIs.include?(doi)
+		            if altmetricDOIs.include?(doi)
                   doc.text(' ')
                   doc.span(class: 'altmetric-embed', 'data-badge-popover':'bottom', 'data-doi': doi)
                 end

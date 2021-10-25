@@ -17,7 +17,7 @@ jobs:
       - run: bundle install --gemfile rubyscholar/Gemfile
       - run: cp rubyscholar/config.yaml .
       - run: bundle exec --gemfile rubyscholar/Gemfile rubyscholar
-      - run: cat docs/publications.md publications.html > publications.tmp
+      - run: cat docs/publications.md publications.md > publications.tmp
       - run: mv publications.tmp docs/publications.md
       # done with rubyscholar citation stuff
       - run: pip install mkdocs-material mkdocs-bibtex 
