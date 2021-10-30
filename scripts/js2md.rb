@@ -1,24 +1,116 @@
-# read on the js file from the py scraper
-# write out md 
+#!/usr/bin/ruby
+
+# example run: ./js2md.rb config-martin.yml example.json
+
+# author: hoelzer.martin@gmail.com
+
+# read in the js file from the py scraper script
+# write out md for mkdocs 
 
 require 'json'
+require 'yaml'
 
-file = File.read('example.json')
+config_file = ARGV[0]
+scholar_json_file = ARGV[1]
+md = File.open('publications.md','w')
 
-data_hash = JSON.parse(file)
+# read in config parameters, e.g. from config-martin.yml
+config = {
+    "scholar_author_id" => nil,
+    "email" => nil,
+    "pdfs" => {},
+    "highlight" => [],
+    "altmetricDOIs" => [],
+    "minCitations" => nil,
+    "preprints" => [],
+    "italicize" => []
+  }
+config = config.merge(YAML.load_file(config_file))
 
-data_hash['articles'].each do |article|
-    article['title']
+# read in json file with google scholar information obtained via scrap.py
+file = File.read(scholar_json_file)
+publications_hash = JSON.parse(file)
 
-    article['link']
-    article['authors']
-    article["publication"]
-    article["cited_by"]["value"]
-    article["cited_by"]["link"]
-    article["year"]
+#########################
+## Get overall google scholar stats
+overall = publications_hash['cited_by']
+overall_cites = overall['table'][0]['citations']['all']
+h_index = overall['table'][1]['h_index']['all']
 
+#puts overall['graph']
+#{"year"=>2016, "citations"=>6}
+#{"year"=>2017, "citations"=>28}
+#{"year"=>2018, "citations"=>39}
+#{"year"=>2019, "citations"=>68}
+#{"year"=>2020, "citations"=>168}
+#{"year"=>2021, "citations"=>330}
+
+#######################
+## Init publications md page
+md << "# Publications <a href=\"https://scholar.google.de/citations?user=#{config['scholar_author_id']}\"><font size=\"3\">cites #{overall_cites}, h-index #{h_index}</font></a>\n\n"
+
+#########################
+## Get per article google scholar stats
+peer_reviewed = []
+preprint = []
+
+article_counter = 0
+publications_hash['articles'].each do |article|
+    article_counter += 1
+    title = article['title']
+    config['italicize'].each do |italicize|
+        if italicize.end_with?(' ')
+            title.gsub!(italicize, "_#{italicize.strip}_ ") unless title.include?("_#{italicize}")
+        else
+            title.gsub!(italicize, "_#{italicize}_")
+        end
+    end
+    article_md = "[#{title}](#{article['link']}) </br>\n"
+
+    authors = article['authors']
+    config['highlight'].each do |highlight|
+        authors.sub!(highlight, "__#{highlight}__")
+    end
+    authors.sub!('...','_et al._')
+    article_md += authors + " </br>\n"
+
+    article_md += article["publication"] + ' '
+
+    cited_by = article["cited_by"]["value"]
+    if cited_by && cited_by > config['minCitations'].to_i
+        article_md += "[:octicons-person-16: Cited #{cited_by}x](#{article["cited_by"]["link"]})"
+    end
+    #article["year"]
+
+    is_preprint = false
+    config['preprints'].each do |preprint_tag|
+        is_preprint = true if article["publication"].include?(preprint_tag)
+    end
+
+    if is_preprint
+        preprint.push(article_md)
+    else
+        peer_reviewed.push(article_md)
+    end
 end
 
-puts data_hash['cited_by']
+md << "## Preprints\n\n"
+md << preprint.join("\n\n")
+md << "\n\n## Peer-reviewed\n\n"
+md << peer_reviewed.join("\n\n")
 
-# "cited_by"=>{"table"=>[{"citations"=>{"all"=>642, "since_2016"=>641}}, {"h_index"=>{"all"=>14, "since_2016"=>14}}, {"i10_index"=>{"all"=>16, "since_2016"=>16}}], "graph"=>[{"year"=>2016, "citations"=>6}, {"year"=>2017, "citations"=>28}, {"year"=>2018, "citations"=>39}, {"year"=>2019, "citations"=>68}, {"year"=>2020, "citations"=>168}, {"year"=>2021, "citations"=>330}]}, "public_access"=>{"link"=>"https://scholar.google.com/citations?view_op=list_mandates&hl=en&user=DMZ7Hc8AAAAJ", "available"=>19, "not_available"=>0},
+md.close
+
+
+# TODO: is it also possible to scrap the DOI/PMID from here?
+
+
+##########################
+## Cruft
+
+#<html>
+#     <ul class="doi-badges">
+#        <li class="__dimensions_badge_embed__" data-doi="10.1111/1462-2920.15186" data-hide-zero-citations="true" data-legend="hover-right" data-style="small_rectangle" ></li>
+#      </ul>
+#        <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+#</html>
