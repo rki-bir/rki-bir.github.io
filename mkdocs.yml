@@ -72,7 +72,20 @@ markdown_extensions:
 ## USE SPACE not TAB
 nav:
 - Home: index.md
-- Team: team.md
+- Team:
+        - Overview: team.md
+        - Head:
+                - Martin Hölzer: team/martin.md
+        - Researchers:
+                - Hugues Richard: team/hugues.md
+                - Matt Huska: team/matt.md
+        - PhD Students:
+                - Foo Bar: team/foobar.md                
+        - Master/Bachleor Students:
+                - Foo Bar: team/foobar.md
+        - Research Assistant:
+                - Foo Bar: team/foobar.md
+        - Alumni: team/alumni.md
 - Publications: publications.md
 - Tools: tools.md
 - Collaborations: collaborations.md

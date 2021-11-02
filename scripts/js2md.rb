@@ -37,6 +37,7 @@ overall = publications_hash['cited_by']
 overall_cites = overall['table'][0]['citations']['all']
 h_index = overall['table'][1]['h_index']['all']
 
+##### maybe useful later ...
 #puts overall['graph']
 #{"year"=>2016, "citations"=>6}
 #{"year"=>2017, "citations"=>28}
@@ -47,16 +48,15 @@ h_index = overall['table'][1]['h_index']['all']
 
 #######################
 ## Init publications md page
-md << "# Publications <a href=\"https://scholar.google.de/citations?user=#{config['scholar_author_id']}\"><font size=\"3\">cites #{overall_cites}, h-index #{h_index}</font></a>\n\n"
+article_counter = publications_hash['articles'].size
+md << "## Publications <a href=\"https://scholar.google.de/citations?user=#{config['scholar_author_id']}\"><font size=\"3\">n=#{article_counter}, cites #{overall_cites}, h-index #{h_index}</font></a>\n\n"
 
 #########################
 ## Get per article google scholar stats
 peer_reviewed = []
 preprint = []
 
-article_counter = 0
 publications_hash['articles'].each do |article|
-    article_counter += 1
     title = article['title']
     config['italicize'].each do |italicize|
         if italicize.end_with?(' ')
@@ -74,7 +74,8 @@ publications_hash['articles'].each do |article|
     authors.sub!('...','_et al._')
     article_md += authors + " </br>\n"
 
-    article_md += article["publication"] + ' '
+    # apparently "publication" can be empty!
+    article_md += article["publication"] + ' ' if article["publication"]
 
     cited_by = article["cited_by"]["value"]
     if cited_by && cited_by > config['minCitations'].to_i
@@ -84,7 +85,7 @@ publications_hash['articles'].each do |article|
 
     is_preprint = false
     config['preprints'].each do |preprint_tag|
-        is_preprint = true if article["publication"].include?(preprint_tag)
+        is_preprint = true if article["publication"] && article["publication"].include?(preprint_tag)
     end
 
     if is_preprint
@@ -94,9 +95,9 @@ publications_hash['articles'].each do |article|
     end
 end
 
-md << "## Preprints\n\n"
+md << "### Preprints\n\n"
 md << preprint.join("\n\n")
-md << "\n\n## Peer-reviewed\n\n"
+md << "\n\n### Peer-reviewed\n\n"
 md << peer_reviewed.join("\n\n")
 
 md.close
