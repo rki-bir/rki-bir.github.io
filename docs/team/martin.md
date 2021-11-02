@@ -44,10 +44,10 @@ Martin is deputy head of the Bioinformatics unit and responsible for research in
 <div id="graph">
   200<br/> <br/> 150 <br/> <br/> 100 <br/> <br/> 50
     <ul>  
-        <li>39:2018:lightblue</li>
-        <li>68:2019:lightblue</li>
-        <li>168:2020:lightblue</li>
-        <li>330:2021:lightblue</li>
+        <li>39:2018:grey</li><!--lightblue-->
+        <li>68:2019:grey</li>
+        <li>168:2020:grey</li>
+        <li>330:2021:grey</li>
     </ul>
 <div id="labels"><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 </div>
