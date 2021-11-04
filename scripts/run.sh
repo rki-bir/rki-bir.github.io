@@ -18,3 +18,7 @@ for MEMBER in martin hugues matt; do
     ## the GitHub CI Action will then automatically add the content from these md files to the individual team pages
 
 done
+
+## combine everything into a team publication file, only include pubs from 2020 onward 
+ruby js2md-all.rb 
+cp publications.md ../docs/

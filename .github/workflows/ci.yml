@@ -11,15 +11,6 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      # rubyscholar citation stuff
-      #- run: conda install -y -c conda-forge ruby
-      #- run: sudo gem install bundler:1.11.2
-      #- run: bundle install --gemfile rubyscholar/Gemfile
-      #- run: cp rubyscholar/config.yaml .
-      #- run: bundle exec --gemfile rubyscholar/Gemfile rubyscholar
-      #- run: cat docs/publications.md publications.md > publications.tmp
-      #- run: mv publications.tmp docs/publications.md
-      # done with rubyscholar citation stuff
       - run: pip install mkdocs-material mkdocs-bibtex google-search-results
       - run: bash scripts/add-publications.sh 
       - run: mkdocs gh-deploy --force
