@@ -1,0 +1,35 @@
+# Google scholar author ID obtained from the URL
+scholar_author_id: 'SCeFpDIAAAAJ'
+
+# Name to highlight, will put "__xxxx__" around the name for markdown rendering
+highlight: 
+  - "M Huska"
+
+# Need an Email address that has been registered with CrossRef to obtain DOIs 
+# using their OpenURL service. 
+# e.g. the following should provide an XML file: 
+# http://www.crossref.org/openurl?redirect=false&pid=YOUR@EMAIL>COM&aulast=Wurm&atitle=Behavioral%20Genomics:%20A,%20Bee,%20C,%20G,%20T
+email: your@email.com
+
+# Show "[Cited Nx]" if N > the following number
+minCitations: 1
+
+# preprints
+preprints:
+ - 'bioRxiv'
+ - 'medRxiv'
+ - 'Preprints'
+
+# Words to italicize (emphasize). These will have "_xxxx_" around them for markdown rendering 
+italicize: 
+ - 'de novo'
+ - 'De novo'
+ - 'et al'
+
+# DOIs of articles for which we should show altmetric.org badges. 
+#altmetricDOIs: 
+# - "10.1038/nature11832"
+
+# Article titles for which we have urls to PDFs
+#pdfs:
+#  "A Y-like social chromosome causes alternative colony organization in fire ants" : "/publications/wangwurm2013socialChromosome.pdf"

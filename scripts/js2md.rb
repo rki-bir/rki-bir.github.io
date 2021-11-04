@@ -10,9 +10,10 @@
 require 'json'
 require 'yaml'
 
-config_file = ARGV[0]
-scholar_json_file = ARGV[1]
-md = File.open('publications.md','w')
+team_member = ARGV[0]
+config_file = ARGV[1]
+scholar_json_file = ARGV[2]
+md = File.open("#{team_member}.publications.md",'w')
 
 # read in config parameters, e.g. from config-martin.yml
 config = {
@@ -52,10 +53,12 @@ article_counter = publications_hash['articles'].size
 md << "## Publications <a href=\"https://scholar.google.de/citations?user=#{config['scholar_author_id']}\"><font size=\"3\">n=#{article_counter}, cites #{overall_cites}, h-index #{h_index}</font></a>\n\n"
 
 #########################
-## Get per article google scholar stats
-peer_reviewed = []
-preprint = []
+## Get per article google scholar stats, and collect by year in hash
+peer_reviewed = {}
+preprint = {}
 
+peer_reviewed_years = []
+preprint_years = []
 publications_hash['articles'].each do |article|
     title = article['title']
     config['italicize'].each do |italicize|
@@ -81,7 +84,10 @@ publications_hash['articles'].each do |article|
     if cited_by && cited_by > config['minCitations'].to_i
         article_md += "[:octicons-person-16: Cited #{cited_by}x](#{article["cited_by"]["link"]})"
     end
-    #article["year"]
+    
+    year = article["year"]
+    peer_reviewed[year] = [] unless peer_reviewed[year]
+    preprint[year] = [] unless preprint[year]
 
     is_preprint = false
     config['preprints'].each do |preprint_tag|
@@ -89,16 +95,26 @@ publications_hash['articles'].each do |article|
     end
 
     if is_preprint
-        preprint.push(article_md)
+        preprint_years.push(year) unless preprint_years.include?(year)
+        preprint[year].push(article_md)
     else
-        peer_reviewed.push(article_md)
+        peer_reviewed_years.push(year) unless peer_reviewed_years.include?(year)
+        peer_reviewed[year].push(article_md)
     end
 end
 
 md << "### Preprints\n\n"
-md << preprint.join("\n\n")
-md << "\n\n### Peer-reviewed\n\n"
-md << peer_reviewed.join("\n\n")
+preprint_years.each do |year|
+    md << "#### #{year}\n\n"
+    md << preprint[year].join("\n\n")
+    md << "\n\n"
+end
+md << "\n\n---\n\n### Peer-reviewed\n\n"
+peer_reviewed_years.each do |year|
+    md << "#### #{year}\n\n"
+    md << peer_reviewed[year].join("\n\n")
+    md << "\n\n"
+end
 
 md.close
 

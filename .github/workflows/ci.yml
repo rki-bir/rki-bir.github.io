@@ -20,5 +20,6 @@ jobs:
       #- run: cat docs/publications.md publications.md > publications.tmp
       #- run: mv publications.tmp docs/publications.md
       # done with rubyscholar citation stuff
-      - run: pip install mkdocs-material mkdocs-bibtex 
+      - run: pip install mkdocs-material mkdocs-bibtex google-search-results
+      - run: bash scripts/add-publications.sh 
       - run: mkdocs gh-deploy --force
