@@ -72,13 +72,13 @@ markdown_extensions:
 ## USE SPACE not TAB
 nav:
 - Home: index.md
-- People:
-        - Team: team.md
-        - Martin Hölzer, PhD: team/martin.md
-        - Hugues Richard, PhD: team/hugues.md
-        - Matt Huska, PhD: team/matt.md
-        - Alumni: team/alumni.md
+#- People:
+#        - Team: team.md
+#        - Martin Hölzer, PhD: team/martin.md
+#        - Hugues Richard, PhD: team/hugues.md
+#        - Matt Huska, PhD: team/matt.md
+#        - Alumni: team/alumni.md
 - Publications: publications.md
 - Tools: tools.md
-- Collaborations: collaborations.md
-- Projects: projects.md
+#- Collaborations: collaborations.md
+#- Projects: projects.md
