@@ -31,7 +31,7 @@ theme:
     text: Roboto
     code: Roboto Mono
 
-copyright: ©2021 BIR
+copyright: ©2021
 
 extra_css:
   - stylesheets/extra.css
