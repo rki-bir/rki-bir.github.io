@@ -1,0 +1,43 @@
+/* https://github.com/squidfunk/mkdocs-material/issues/1635 */
+
+img[src*="#round"] { 
+    margin: 6px 3px 60px 6px; 
+    border-radius:10%; 
+}
+
+img[src*="#shadow"] {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* https://www.xul.fr/en/css/bar-chart.php */
+#graph
+{
+    position:relative;
+    float:right;
+    width:280px;
+    height:216px;
+    margin:8px;
+    padding:0;	
+}
+
+#graph ul
+{
+    position:absolute;
+    top:0;
+    left:32px;
+    width:260px;
+    height:200px;
+    border-left:1px solid black;
+    border-bottom:1px solid black;	
+}
+
+#graph li
+{
+   position:absolute;	
+   list-style:none;
+   background:lightblue;
+   width:40px;
+   text-align:center;
+   border:1px solid black;
+   visibility: hidden;
+}
