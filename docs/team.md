@@ -19,12 +19,12 @@
 
 ## Students <font size="3">master, bachelor</font> 
 
-[Charlotte Reuschel](team/charlotte.md), <font size="2">B. Sc.</font> 
+[Foo Bar](), <font size="2">B. Sc.</font> 
 
 ---
 
 ## Research assistants
 
-Eva Aßmann
+Ernie
 
-David Fischer
+Bert
