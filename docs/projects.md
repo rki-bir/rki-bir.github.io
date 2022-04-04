@@ -1,12 +1,16 @@
 # Projects
 
-We are always looking for motivated students to join the group. We have many projects and ideas for assistants and bachlor/master theses in areas such as:
+We are always looking for motivated students to join the group. We have many projects and ideas for assistants, internships, and bachlor/master theses in areas such as:
 
-* _de novo_ hybrid assembly
-* metagenomics & -transcriptomics
-* prokaryotic annotation pipelining
-* high-throughput data visualization
-* pathogen detection & virus bioinformatics
-* long-read analysis & real-time sequencing
+* _De novo_ hybrid assembly
+* Metagenomics & -transcriptomics
+* Prokaryotic annotation pipelining
+* High-throughput data visualization
+* Bioinformatics workflow management systems
+* Pathogen detection & virus bioinformatics
+* Outbreak analysis & pathogen evolution
+* Long-read analysis & real-time sequencing
+* Genomic surveillance of pathogens
 
-Some current projects are given here, please [contact us directly](team.md) for more details.
+
+Please [contact us directly](team.md) for more details.
