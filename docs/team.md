@@ -1,12 +1,9 @@
 # Team
 
-## Head
-
-[Martin Hölzer](team/martin.md), <font size="2">PhD</font> 
-
----
 
 ## Researchers
+
+[Martin Hölzer](team/martin.md), <font size="2">PhD</font> 
 
 [Hugues Richard](team/hugues.md), <font size="2">PhD</font> 
 
